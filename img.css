@@ -33,7 +33,7 @@ body {
 }
 
 .header img {
-    width: 10vw;
+    width: 12vw;
     height: min-content;
     display: block;
     padding-top: 2%;
@@ -63,22 +63,21 @@ body {
 h3 {
     text-align: center;
     vertical-align: top;
-    font-size: 1.05vw;
-    line-height: 1px;
+    font-size: 1vw;
+    line-height: auto;
     padding: 0 10px 5px;
 }
 
 .card {
-    border: 1px rgba(130, 155, 155, 0.253) solid;
+    border: 5px rgba(130, 155, 155, 0.253) solid;
     border-radius: 20px;
     width: fit-content;
     height: fit-content;
     margin: 0 .1vmax;
-    transition: all .5s 60ms;
+    transition: all .25s 50ms;
 }
 
 .card:hover {
-    z-index: +1;
     -webkit-transform: scale(1.45);
     -ms-transform: scale(1.45);
     transform: scale(1.45);
@@ -88,7 +87,7 @@ h3 {
 
 
 .card img {
-    border-radius: 20px;
+    border-radius: 60px;
     padding: 0.5vw;
     height: 25vh;
     width: auto;
