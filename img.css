@@ -1,5 +1,10 @@
 @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/hk-grotesk.min.css");
 @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/nevermind.min.css");
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/agave.min.css");
+
+/* ------------------------------ */
+/* Relevant Declarations */
+/* ------------------------------ */
 
 ::-moz-selection {
     background-color: rgba(106, 51, 151, 0.678);
@@ -10,11 +15,16 @@
 }
 
 body {
-    font-family: "HK Grotesk";
+    font-family: "Agave";
     color: aliceblue;
     background-color: #000000;
     padding: 5vh 5vw 10vh;
 }
+
+/* ------------------------------ */
+/* Header Section */
+/* ------------------------------ */
+
 .header {
     border-radius: 25px;
     background-color: #111111;
@@ -34,21 +44,26 @@ body {
 
 .header img {
     width: 12vw;
+    height: -webkit-min-content;
+    height: -moz-min-content;
     height: min-content;
     display: block;
     padding-top: 2%;
     margin: auto auto 0;
     transition: all .5s 60ms;
+    -ms-user-select: none;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
 }
 
 .header img:hover {
-    -webkit-transform: scale(1.3);
-    -ms-transform: scale(1.3);
     transform: scale(1.3);
 }
+
+/* ------------------------------ */
+/* Lower body elements */
+/* ------------------------------ */
 
 .upperContainer {
     /* width: 95   vw; */
@@ -60,37 +75,43 @@ body {
     flex-wrap: wrap;
 }
 
-h3 {
+.card h3 {
     text-align: center;
     vertical-align: top;
-    font-size: 1vw;
-    line-height: auto;
-    padding: 0 10px 5px;
+    font-size: calc(100%);
+    line-height: 10%;
+    padding: 0 1vw 5px;
+    word-wrap: break-word;
 }
 
 .card {
-    border: 5px rgba(130, 155, 155, 0.253) solid;
+    border: 1px rgba(130, 155, 155, 0.253) solid;
     border-radius: 20px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
-    margin: 0 .1vmax;
-    transition: all .25s 50ms;
+    margin: .6vh .3vw;
+    transition: all .2s 30ms;
+    z-index: 99;
+    padding: 1ch;
 }
 
 .card:hover {
-    -webkit-transform: scale(1.45);
-    -ms-transform: scale(1.45);
-    transform: scale(1.45);
+    transform: scale(1.15); 
+    z-index: 100;
     border: rgba(43, 78, 192, 0.658) solid 1px;
     background-color: rgb(27, 100, 148);
 }
 
-
 .card img {
-    border-radius: 60px;
-    padding: 0.5vw;
-    height: 25vh;
-    width: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    padding: 0 0.55vh .55vh;
+    height: calc(30vh + 100px);
+    aspect-ratio: 1;
     display: block; /* this thing is super important */
     margin-right: auto;
     margin-left: auto;
